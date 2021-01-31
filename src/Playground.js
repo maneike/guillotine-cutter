@@ -63,6 +63,8 @@ export default function Playground(props) {
   return (
     <>
       <h1>{props.title}</h1>
+      <p>Here is where the magic will happen.</p>
+      <p>Soon enough.</p>
     </>
   );
 }

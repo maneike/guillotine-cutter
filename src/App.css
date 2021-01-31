@@ -1,9 +1,11 @@
 .App {
   text-align: center;
+  color: #fafafa;
+  padding: 1vh;
 }
 
 svg {
-  height: 40vmin;
+  height: 14vmin;
   pointer-events: none;
 }
 
@@ -15,11 +17,8 @@ svg {
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  min-height: 30vh;
+  text-align: left;
   font-size: calc(10px + 2vmin);
   color: white;
 }
