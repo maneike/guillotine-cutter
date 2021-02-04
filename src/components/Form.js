@@ -1,27 +1,50 @@
 import { useState } from "react";
+import InfoIcon from "@material-ui/icons/Info";
+import Tooltip from "@material-ui/core/Tooltip";
+
 import "./Form.css";
 import Workspace from "./Workspace";
-import InfoIcon from "@material-ui/icons/Info";
+import RandomColor from "../helpers/RandomColor";
 
 export default function Form(props) {
-  var randomColor = Math.floor(Math.random() * 16777215).toString(16);
-  var current = "#" + randomColor;
-
   const [width, setWidth] = useState("");
   const [height, setHeight] = useState("");
   const [rectanglesItems, setRectanglesItems] = useState([]);
+  const [dimensionsError, setDimensionsError] = useState("");
 
-  //if (w || h == 0 || null) dont display;
+  function Validation() {
+    if (
+      isNaN(width) ||
+      isNaN(height) ||
+      width == 0 ||
+      height == 0 ||
+      width === null ||
+      height === null
+    ) {
+      setDimensionsError("Enter correct dimensions");
+      return false;
+    }
+    if (width > 2000 || height > 2000) {
+      setDimensionsError("Dimensions too big");
+      return false;
+    }
+    return true;
+  }
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    setRectanglesItems([
-      ...rectanglesItems,
-      {
-        w: width / 2,
-        h: height / 2,
-        c: current,
-      },
-    ]);
+    setDimensionsError("");
+    Validation();
+    if (Validation()) {
+      setRectanglesItems([
+        ...rectanglesItems,
+        {
+          w: width / 2,
+          h: height / 2,
+          c: RandomColor(),
+        },
+      ]);
+    }
   };
 
   return (
@@ -29,7 +52,7 @@ export default function Form(props) {
       <br />
       <form onSubmit={handleFormSubmit}>
         <label>
-          <p>Dimensions:</p>
+          <p>Rectangle dimensions:</p>
           {"Width: "}
           <input
             type="text"
@@ -45,13 +68,19 @@ export default function Form(props) {
             onChange={(e) => setHeight(e.target.value)}
           />
         </label>
+        {{ dimensionsError } ? (
+          <p style={{ color: "crimson" }}>{dimensionsError}</p>
+        ) : null}
         <br />
         <input type="submit" value="Add a rectangle" />
+        <Tooltip
+          title="Some rectangles may appear invisible. That's because the color of
+            the figures probably matches the background color."
+        >
+          <InfoIcon />
+        </Tooltip>
       </form>
-      <p style={{ display: "block" }}>
-        <InfoIcon /> Some rectangles may appear invisible. That's because the
-        color of the figures probably matches the background color.
-      </p>
+      <p>Current space: 2000 x 2000</p>
       <Workspace rectangles={rectanglesItems} />
     </>
   );
