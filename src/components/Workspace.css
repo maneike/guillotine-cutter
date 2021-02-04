@@ -1,0 +1,9 @@
+.workspace {
+  width: 1000px;
+  height: 1000px;
+  margin: auto;
+  display: block;
+  border: solid #fafafa;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}

@@ -1,18 +1,14 @@
 import "./App.css";
-import Playground from "./components/Playground";
-import Logo from "./components/Logo";
-import Workplace from "./components/Workplace";
-//        <Playground title="👨🏻‍💻" />
+import Form from "./components/Form";
+
 function App() {
   return (
     <>
       <div className="App">
         <header className="App-header">
-          <Logo />
+          <h1>Guillotine-cutter App</h1>
         </header>
-        <h1>Guillotine-cutter App</h1>
-
-        <Workplace />
+        <Form />
       </div>
     </>
   );

@@ -1,0 +1,28 @@
+input,
+button {
+  width: calc(25% - 1.5em);
+  padding: 0.5em;
+  font-size: 1.3rem;
+  outline: none;
+  margin: 1em auto;
+  border: solid gainsboro;
+  border-radius: 8px;
+  transition: border 0.5s ease;
+}
+
+label p {
+  font-size: 1.5em;
+}
+
+label > input:focus {
+  border: solid rgb(0, 140, 255);
+  border-radius: 8px;
+}
+
+form > input {
+  transition: background 0.3s ease;
+}
+form > input:active {
+  background: rgb(0, 140, 255);
+  border: solid rgb(0, 110, 255);
+}
