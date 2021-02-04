@@ -1,5 +1,6 @@
 {
-  "name": "sort-measurer",
+  "name": "guillotine-cutter",
+  "homepage": "https://maneike.github.io/guillotine-cutter/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,6 +11,7 @@
     "@testing-library/user-event": "^12.6.0",
     "bootstrap": "^4.5.3",
     "css-vars-hook": "^0.2.5",
+    "gh-pages": "^3.1.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.3",
     "react-dom": "^17.0.1",
