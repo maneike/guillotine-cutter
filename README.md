@@ -1,4 +1,4 @@
-# Website link
+# Demo
 
 [Guillotine Cutter](https://maneike.github.io/guillotine-cutter)
 
