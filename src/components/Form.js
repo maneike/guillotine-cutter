@@ -12,8 +12,8 @@ export default function Form(props) {
   const [rectanglesItems, setRectanglesItems] = useState([]);
   const [dimensionsError, setDimensionsError] = useState("");
 
-  const sheetwidth = 2000;
-  const sheetheight = 2000;
+  const [sheetWidth, setSheetWidth] = useState(2000);
+  const sheetHeight = 2000;
 
   function Validation() {
     if (
@@ -27,7 +27,7 @@ export default function Form(props) {
       setDimensionsError("Enter correct dimensions");
       return false;
     }
-    if (width > sheetwidth || height > sheetheight) {
+    if (width > sheetWidth || height > sheetHeight) {
       setDimensionsError("Dimensions too big");
       return false;
     }
@@ -84,7 +84,7 @@ export default function Form(props) {
         </Tooltip>
       </form>
       <p>
-        Current space: {sheetwidth} x {sheetheight}
+        Current space: {sheetWidth} x {sheetHeight}
       </p>
       <Workspace rectangles={rectanglesItems} />
     </>
