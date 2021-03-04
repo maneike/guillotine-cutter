@@ -11,9 +11,8 @@ export default function Form(props) {
   const [height, setHeight] = useState("");
   const [rectanglesItems, setRectanglesItems] = useState([]);
   const [dimensionsError, setDimensionsError] = useState("");
-
   const [sheetWidth, setSheetWidth] = useState(2000);
-  const sheetHeight = 2000;
+  const [sheetHeight, setSheetHeight] = useState(2000);
 
   function Validation() {
     if (
