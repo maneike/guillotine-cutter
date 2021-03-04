@@ -12,19 +12,22 @@ export default function Form(props) {
   const [rectanglesItems, setRectanglesItems] = useState([]);
   const [dimensionsError, setDimensionsError] = useState("");
 
+  const sheetwidth = 2000;
+  const sheetheight = 2000;
+
   function Validation() {
     if (
       isNaN(width) ||
       isNaN(height) ||
-      width == 0 ||
-      height == 0 ||
+      width <= 0 ||
+      height <= 0 ||
       width === null ||
       height === null
     ) {
       setDimensionsError("Enter correct dimensions");
       return false;
     }
-    if (width > 2000 || height > 2000) {
+    if (width > sheetwidth || height > sheetheight) {
       setDimensionsError("Dimensions too big");
       return false;
     }
@@ -80,7 +83,9 @@ export default function Form(props) {
           <InfoIcon />
         </Tooltip>
       </form>
-      <p>Current space: 2000 x 2000</p>
+      <p>
+        Current space: {sheetwidth} x {sheetheight}
+      </p>
       <Workspace rectangles={rectanglesItems} />
     </>
   );
