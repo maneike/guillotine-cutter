@@ -7,7 +7,7 @@ export default function Workspace(props) {
       style={{
         width: rectangle.w,
         height: rectangle.h,
-        background: rectangle.c,
+        backgroundColor: rectangle.c,
         display: "inline-block",
         float: "left",
         position: "relative",
