@@ -1,3 +1,3 @@
 export default function RandomColor() {
-  return "#" + Math.floor(Math.random() * 16777215).toString(16);
+  return "#" + (Math.random().toString(16) + "000000").slice(2, 8);
 }
