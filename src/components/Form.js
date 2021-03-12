@@ -5,6 +5,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 import "./Form.css";
 import Workspace from "./Workspace";
 import RandomColor from "../helpers/RandomColor";
+import isRealNumber from "../helpers/IsRealNumber";
 
 export default function Form(props) {
   const [width, setWidth] = useState("");
@@ -15,14 +16,7 @@ export default function Form(props) {
   const [sheetHeight, setSheetHeight] = useState(2000);
 
   function Validation() {
-    if (
-      isNaN(width) ||
-      isNaN(height) ||
-      width <= 0 ||
-      height <= 0 ||
-      width === null ||
-      height === null
-    ) {
+    if ((!isRealNumber(width), !isRealNumber(height))) {
       setDimensionsError("Enter correct dimensions");
       return false;
     }
