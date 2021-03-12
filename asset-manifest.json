@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/guillotine-cutter/static/css/main.30489132.chunk.css",
-    "main.js": "/guillotine-cutter/static/js/main.fbc3f396.chunk.js",
-    "main.js.map": "/guillotine-cutter/static/js/main.fbc3f396.chunk.js.map",
+    "main.js": "/guillotine-cutter/static/js/main.f51905b1.chunk.js",
+    "main.js.map": "/guillotine-cutter/static/js/main.f51905b1.chunk.js.map",
     "runtime-main.js": "/guillotine-cutter/static/js/runtime-main.256f0c23.js",
     "runtime-main.js.map": "/guillotine-cutter/static/js/runtime-main.256f0c23.js.map",
     "static/js/2.19751c6d.chunk.js": "/guillotine-cutter/static/js/2.19751c6d.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.256f0c23.js",
     "static/js/2.19751c6d.chunk.js",
     "static/css/main.30489132.chunk.css",
-    "static/js/main.fbc3f396.chunk.js"
+    "static/js/main.f51905b1.chunk.js"
   ]
 }
