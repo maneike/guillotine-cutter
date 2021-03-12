@@ -61,6 +61,7 @@ export default function Form(props) {
             placeholder="e.g. 200"
             value={width}
             onChange={(e) => setWidth(e.target.value)}
+            autoFocus
           />
           {" Height: "}
           <input
@@ -74,7 +75,7 @@ export default function Form(props) {
           <p style={{ color: "crimson" }}>{dimensionsError}</p>
         ) : null}
         <br />
-        <input type="submit" value="Add a rectangle" />
+        <input type="submit" value="Add" />
         <Tooltip
           title="Some rectangles may appear invisible. That's because the color of
             the figures probably matches the background color."
