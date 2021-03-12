@@ -9,7 +9,6 @@ function App() {
           <h1>Guillotine-cutter App</h1>
         </header>
         <Form />
-        <p className="version">v1.0.46</p>
       </div>
     </>
   );
