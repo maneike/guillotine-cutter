@@ -9,5 +9,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Future implementations
   - Different sheet shapes and sizes
   - Figures arrangement algorithm improvement
+  - Change pathing from relative to absolute
 
 
