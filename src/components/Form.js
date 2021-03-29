@@ -8,8 +8,8 @@ import RandomColor from "../helpers/RandomColor";
 import isRealNumber from "../helpers/IsRealNumber";
 
 export default function Form(props) {
-  const [width, setWidth] = useState("");
-  const [height, setHeight] = useState("");
+  let [width, setWidth] = useState("");
+  let [height, setHeight] = useState("");
   const [rectanglesItems, setRectanglesItems] = useState([]);
   const [dimensionsError, setDimensionsError] = useState("");
   const [sheetWidth, setSheetWidth] = useState(2000);
@@ -31,6 +31,12 @@ export default function Form(props) {
     e.preventDefault();
     setDimensionsError("");
     Validation();
+
+    //rotate each rectangle to be more wide than high
+    if (height > width) {
+      [width, height] = [height, width];
+    }
+
     if (Validation()) {
       setRectanglesItems([
         ...rectanglesItems,
