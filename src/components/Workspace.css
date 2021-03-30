@@ -4,7 +4,6 @@
   margin: auto;
   display: block;
   border: solid #fafafa;
-  display: flex;
-  flex-flow: wrap;
+  flex-wrap: wrap;
   align-content: flex-start;
 }
